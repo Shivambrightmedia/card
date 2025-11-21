@@ -64,7 +64,7 @@ function App() {
             {error && <p style={{ color: '#ef4444', textAlign: 'center', marginBottom: '1rem' }}>{error}</p>}
 
             <button className="btn-primary" onClick={handleScan} disabled={loading}>
-                {loading ? <><span className="loading-spinner"></span>Processing...</> : 'ADD CARD'}
+                {loading ? <><span className="loading-spinner"></span>Scanning & Saving...</> : 'ADD CARD'}
             </button>
 
             {result && (
