@@ -13,7 +13,8 @@ const PORT = 5000;
 const corsOptions = {
     origin: [
         'http://localhost:5173', // Local development
-        'https://cardscanner1334.netlify.app' // Production Netlify
+        'https://cardscanner1334.netlify.app', // Production Netlify (old)
+        'https://cardscanner1234.netlify.app' // Production Netlify (new)
     ],
     credentials: true,
     optionsSuccessStatus: 200
