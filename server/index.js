@@ -9,8 +9,16 @@ const { appendToGoogleSheet, initializeSheet } = require('./utils/googleSheetHan
 const app = express();
 const PORT = 5000;
 
-// Middleware
-app.use(cors());
+// Middleware - CORS configuration
+const corsOptions = {
+    origin: [
+        'http://localhost:5173', // Local development
+        'https://cardscanner1334.netlify.app' // Production Netlify
+    ],
+    credentials: true,
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Configure Multer for memory storage (we process buffers directly)
